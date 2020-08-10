@@ -9,6 +9,7 @@ class MessageConsumer implements ConsumerInterface
 {
     public function execute(AMQPMessage $msg)
     {
+        //sleep(2);
         $message = json_decode($msg->body, true);
         echo 'Processando mensagem:'.PHP_EOL;
 
